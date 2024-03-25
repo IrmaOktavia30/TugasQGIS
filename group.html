@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok1</title>
+    <style>
+        /* Style untuk navigasi */
+        #navigation {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #navigation:hover {
+            background-color: #555;
+        }
+
+        #map {
+            height: 400px; /* Sesuaikan dengan tinggi yang diinginkan */
+            width: 100%;
+        }
+        #members {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #members p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navigation" onclick="toggleNavigation()">
+        <h1>KELOMPOK1</h1>
+    </div>
+    <div id="members" >
+        <p>Irma Oktavia 2021610010 </p>
+        <p>Reka Septi 2021610024 </p>
+    </div>
+    <div id="map">
+        <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+            <div id="popup-content"></div>
+        </div>
+    </div>
+    <button onclick="goBack()">Kembali</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script>
+        function toggleNavigation() {
+            var navigationContent = document.getElementById("map");
+            if (navigationContent.style.display === "none") {
+                navigationContent.style.display = "block";
+            } else {
+                navigationContent.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
